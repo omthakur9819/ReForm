@@ -1,0 +1,17 @@
+﻿# Large data/model zips
+*.zip
+
+# Trained models (too large for GitHub, re-generate from train.ipynb)
+models/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Temp datasets
+temp_datasets/
+
+# Conda/venv
+.env

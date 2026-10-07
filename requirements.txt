@@ -1,0 +1,17 @@
+# ReForm — E-Waste Plastic Identification and Reuse System
+# requirements.txt — install into the reform conda environment
+#
+# Usage:
+#   conda activate reform
+#   pip install -r requirements.txt
+
+tensorflow==2.15.0
+opencv-python==4.11.0.86
+Pillow==12.3.0
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+easyocr==1.7.2
+streamlit==1.60.0
+thefuzz[speedup]==0.22.1
+numpy==1.26.4

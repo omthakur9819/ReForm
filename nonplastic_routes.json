@@ -1,0 +1,172 @@
+{
+  "_readme": "Routing table for non-plastic materials detected by Stage 0. Each key matches a Stage 0 class name (except 'plastic' which continues to Stage 1). All routes and regulation notes must be verified against current local guidelines before use in a public-facing system. Fields marked VERIFY/CITE need a real source.",
+  "metal": {
+    "label": "Metal",
+    "description": "Aluminium chassis, steel frames, copper heatsinks, zinc die-cast parts.",
+    "recyclable": "yes",
+    "recyclable_note": "Metals are among the most recyclable materials. Aluminium and copper have high scrap value and well-established recovery chains.",
+    "hazards": [
+      "Sharp edges — wear cut-resistant gloves during disassembly",
+      "Beryllium copper alloys (rare, found in some connectors) are toxic if machined or ground — VERIFY/CITE",
+      "Lead-tin solder on metal chassis joins — wash hands after handling"
+    ],
+    "handling_rules": [
+      "Separate ferrous (steel) from non-ferrous (aluminium, copper) for better scrap value",
+      "Remove plastic brackets and rubber gaskets before sending to smelter",
+      "Wear gloves — cut hazard from sheet metal edges"
+    ],
+    "recovery_route": "Metal smelting and refining",
+    "recovery_detail": "Send to scrap metal dealer or authorised e-waste facility with metal recovery capability. Aluminium is remelted at ~660°C; copper at ~1085°C. Both are infinitely recyclable without quality loss.",
+    "reuse_options": [
+      "Aluminium heatsinks: resell to electronics repair shops or hobbyists",
+      "Copper heat pipes: copper scrap dealer",
+      "Steel chassis: ferrous scrap recycler",
+      "Intact brackets and standoffs: resell as spare parts"
+    ],
+    "regulation_note": "Metal components of e-waste are covered under E-Waste (Management) Rules 2022. Scrap metal dealers handling e-waste metals must be registered under the Rules. VERIFY/CITE: Rule 16, E-Waste (Management) Rules 2022.",
+    "source": "VERIFY/CITE"
+  },
+  "PCB": {
+    "label": "Printed Circuit Board (PCB)",
+    "description": "Green, brown, or black boards populated with components — ICs, capacitors, resistors, connectors.",
+    "recyclable": "yes — specialist precious metal recovery required",
+    "recyclable_note": "PCBs contain gold, silver, palladium, and copper in concentrations far higher than mined ore. They also contain lead, cadmium, mercury, and brominated flame retardants. Do NOT send to general recycling.",
+    "hazards": [
+      "Lead solder — wash hands after handling; do not eat or drink nearby",
+      "Cadmium in some older capacitors and semiconductors — toxic if inhaled as dust",
+      "Mercury in some older relays and fluorescent backlight inverters",
+      "Brominated flame retardants in the FR4 substrate — do not burn",
+      "Beryllium oxide in some high-power ceramic capacitors — extremely toxic if ground — VERIFY/CITE",
+      "Lithium battery cells soldered onto some boards — short-circuit and fire risk"
+    ],
+    "handling_rules": [
+      "NEVER burn or melt PCBs — releases dioxins, furans, and heavy metal fumes",
+      "Wear nitrile gloves and avoid touching your face",
+      "Remove lithium cells before storage or transport",
+      "Store in anti-static bags to prevent component damage and reduce dust",
+      "Do not use acid leaching at home — hydrometallurgical recovery requires fume hoods and neutralisation"
+    ],
+    "recovery_route": "Precious metal recovery (hydrometallurgy or pyrometallurgy)",
+    "recovery_detail": "Send to an authorised e-waste recycler with precious metal recovery capability. The recycler uses acid leaching (hydrometallurgy) or high-temperature smelting (pyrometallurgy) to recover gold, silver, copper, and palladium. A typical PCB contains 200–500 g of gold per tonne. VERIFY/CITE: actual concentration figures.",
+    "reuse_options": [
+      "Functional boards: test and resell on eBay, OLX, or electronics markets",
+      "Individual ICs: desolder and sell (Arduino community, repair shops)",
+      "Copper traces: recovered by specialist recyclers",
+      "Precious metals: gold fingers on RAM and PCIe slots have highest gold concentration"
+    ],
+    "regulation_note": "PCBs are hazardous e-waste under E-Waste (Management) Rules 2022 and must be handled by authorised recyclers. Informal dismantling (burning, acid stripping in open air) is illegal and extremely hazardous. VERIFY/CITE: Schedule II (Hazardous Substances), E-Waste (Management) Rules 2022.",
+    "source": "VERIFY/CITE"
+  },
+  "glass_screen": {
+    "label": "Glass Screen / Display Panel",
+    "description": "LCD panels, LED-backlit displays, CRT glass screens, touchscreen glass.",
+    "recyclable": "conditional",
+    "recyclable_note": "LCD glass is recyclable but requires specialist processing to separate glass from liquid crystals, polariser films, and ITO coating. CRT glass contains lead and requires specialist lead-glass recyclers.",
+    "hazards": [
+      "CRT glass contains 2–3 kg of lead per unit — treat as hazardous",
+      "LCD liquid crystals are toxic if ingested or absorbed through broken skin",
+      "CCFL backlights (in pre-LED LCDs) contain mercury — handle as hazardous waste",
+      "Broken glass — cut hazard; wear thick gloves and eye protection",
+      "CRT implosion risk — never strike or drop a CRT; depressurise safely before disassembly"
+    ],
+    "handling_rules": [
+      "Never break a CRT — implosion risk and lead dust",
+      "If an LCD panel is cracked, seal in a plastic bag to contain liquid crystals",
+      "CCFL backlights must be removed by trained technicians and sent to mercury recyclers",
+      "Wear thick gloves and safety glasses when handling broken glass",
+      "CRT glass must go to a CRT-certified recycler — not general glass recycling"
+    ],
+    "recovery_route": "Specialist glass recycling (LCD) or CRT glass recycler (CRT)",
+    "recovery_detail": "LCD glass: the ITO (indium tin oxide) coating is recovered for indium, a rare metal used in new displays. The glass is then crushed and remelted. CRT glass: lead is extracted and the silica glass reused. VERIFY/CITE: indium recovery rate figures.",
+    "reuse_options": [
+      "Intact working displays: resell or donate",
+      "Broken LCD panels: send to specialist recycler — do not attempt DIY disassembly",
+      "Intact touchscreen glass (uncracked): harvest for repair parts market"
+    ],
+    "regulation_note": "Display panels are listed under consumer electrical and electronic equipment in E-Waste (Management) Rules 2022. CRT monitors and TVs are specifically called out due to lead glass. Must be handed to authorised recycler. VERIFY/CITE: Schedule I, Category 3 and 4.",
+    "source": "VERIFY/CITE"
+  },
+  "cable_wire": {
+    "label": "Cable / Wire",
+    "description": "USB cables, power cables, HDMI/VGA cables, ribbon cables, ethernet cables.",
+    "recyclable": "yes",
+    "recyclable_note": "Cables contain copper (high scrap value) inside PVC or PE insulation. Both can be recovered but must be separated.",
+    "hazards": [
+      "PVC insulation contains phthalate plasticisers (endocrine disruptors) — avoid prolonged skin contact with old cables",
+      "PVC releases HCl and dioxins if burned — never incinerate",
+      "Old cables may contain lead stabilisers in the PVC compound",
+      "High-voltage power cables retain charge after disconnection — discharge before handling"
+    ],
+    "handling_rules": [
+      "Never burn cables to recover copper — illegal and produces toxic gases",
+      "Strip PVC insulation mechanically (cable stripper tool) for copper recovery",
+      "Discharge any capacitors in the connected device before disconnecting cables",
+      "Coil and bundle cables to prevent tangling and physical damage during storage"
+    ],
+    "recovery_route": "Copper recovery — mechanical cable stripping",
+    "recovery_detail": "Cables are fed into a granulator that shreds them into small pieces, then an air separator or water table separates the copper granules from the PVC/PE insulation. The copper is sold as scrap; the PVC is sent to a specialist PVC recycler. VERIFY/CITE: cable recycling process details.",
+    "reuse_options": [
+      "Working cables: donate, resell, or reuse",
+      "USB-A, HDMI, 3.5mm cables: high demand in second-hand electronics market",
+      "Copper core: scrap copper dealer (stripped cables fetch higher prices)",
+      "Ethernet cable copper: Cat5e/Cat6 cable is a good copper source"
+    ],
+    "regulation_note": "Cables and wires are covered under E-Waste (Management) Rules 2022 as accessories of listed equipment. Open burning of cables for copper recovery is prohibited under both e-waste rules and air pollution control regulations. VERIFY/CITE: Air (Prevention and Control of Pollution) Act 1981.",
+    "source": "VERIFY/CITE"
+  },
+  "battery": {
+    "label": "Battery",
+    "description": "Lithium-ion, lithium-polymer, NiMH, NiCd, lead-acid, and button cell batteries from e-waste.",
+    "recyclable": "yes — hazardous, specialist handling required",
+    "recyclable_note": "All battery chemistries are recyclable but none should go into general waste. Lithium batteries are a fire risk if damaged. Lead-acid batteries are highly toxic but have a well-established recycling chain.",
+    "hazards": [
+      "Lithium-ion / lithium-polymer: FIRE AND EXPLOSION risk if punctured, crushed, overcharged, or short-circuited",
+      "Swollen/puffed lithium batteries are unstable — handle with extreme care and do not compress",
+      "Lead-acid: contains ~30% sulphuric acid — corrosive; lead is highly toxic",
+      "NiCd: cadmium is a carcinogen and cumulative toxin",
+      "Button cells: mercury (older types) or lithium — toxic if swallowed; keep away from children",
+      "All batteries can cause burns if short-circuited"
+    ],
+    "handling_rules": [
+      "NEVER puncture, crush, or disassemble a lithium battery",
+      "Store damaged lithium batteries in a sand-filled metal container outdoors — fire risk",
+      "Tape over battery terminals before transport to prevent short circuits",
+      "Do not store lithium batteries near flammable materials",
+      "Lead-acid: wear acid-resistant gloves and eye protection; neutralise spills with baking soda",
+      "If a lithium battery is on fire: use dry sand or a Class D extinguisher — water makes it worse",
+      "Swollen batteries: place in a fireproof bag, take to an authorised recycler immediately"
+    ],
+    "recovery_route": "Authorised battery recycler — hazardous waste handling",
+    "recovery_detail": "Lithium-ion: hydrometallurgical process recovers lithium, cobalt, nickel, and manganese. Lead-acid: 95%+ recyclable — lead plates melted and recast, acid neutralised. NiCd: cadmium and nickel recovered by pyrometallurgy. VERIFY/CITE: recovery rates and process details.",
+    "reuse_options": [
+      "Healthy lithium cells (above 80% capacity): test and resell for device repair",
+      "Lead-acid batteries: scrap dealer or battery manufacturer take-back (high scrap value)",
+      "NiMH AA/AAA cells: rechargeable battery recycling bins (many electronics stores)",
+      "Button cells: manufacturer take-back programmes"
+    ],
+    "regulation_note": "Batteries are regulated under the Battery Waste Management Rules 2022 (India), separate from the E-Waste (Management) Rules 2022. Producers and importers have EPR obligations. Consumers must return batteries to authorised collection points — never dispose in municipal solid waste. VERIFY/CITE: Battery Waste Management Rules 2022, MoEFCC.",
+    "safety_warning": "⚠️ HAZARDOUS ITEM — Batteries require special handling. Do not dispose in general waste. Risk of fire, chemical burns, and toxic exposure if mishandled.",
+    "source": "VERIFY/CITE"
+  },
+  "unknown": {
+    "label": "Unknown / Unrecognised",
+    "description": "The material could not be identified with sufficient confidence.",
+    "recyclable": "unknown",
+    "recyclable_note": "Cannot determine recyclability without material identification.",
+    "hazards": [
+      "Unknown material — treat as potentially hazardous until identified"
+    ],
+    "handling_rules": [
+      "Do not burn or incinerate",
+      "Retake the photo with better lighting, a plain background, and the item filling most of the frame",
+      "If still unidentified, take the item to an authorised e-waste collection centre"
+    ],
+    "recovery_route": "Authorised e-waste collection centre",
+    "recovery_detail": "When material type cannot be determined, the safest option is to hand the item to a trained e-waste handler who can visually inspect and manually sort it.",
+    "reuse_options": [
+      "If the item is still functional, consider donating or reselling before recycling"
+    ],
+    "regulation_note": "Any item suspected to be e-waste should be handled under E-Waste (Management) Rules 2022 and handed to an authorised PRO or collection point. VERIFY/CITE.",
+    "source": "VERIFY/CITE"
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "_readme": "Knowledge base for e-waste plastic items. Each key is a Stage 1 class name. 'typical_plastic' is the most likely polymer based on item type and era — it is a probabilistic guess, NOT a confirmed identification. Polymer type is only confirmed when a resin code is read by the OCR stage. All hazard and regulation notes should be verified against current local guidelines before use in a public-facing system. Fields marked VERIFY/CITE need a real source before submission.",
+  "keyboard": {
+    "typical_plastic": "ABS",
+    "plastic_confidence": "high",
+    "recyclable": "conditional",
+    "recyclable_note": "Recyclable at authorised e-waste facilities; not in general municipal plastic bins due to mixed materials and potential BFR content.",
+    "bfr_risk": "medium",
+    "bfr_note": "Keyboards manufactured before ~2010 are more likely to contain brominated flame retardants (BFRs) in the ABS casing. Post-2010 units may comply with RoHS. VERIFY/CITE: RoHS Directive 2011/65/EU and its India equivalent.",
+    "hazards": [
+      "BFR-treated ABS releases toxic fumes (HBr, dioxins) if burned — do not incinerate",
+      "May contain small amounts of lead solder on internal PCB",
+      "Keycap dyes may contain heavy metal pigments in older units"
+    ],
+    "handling_rules": [
+      "Wear nitrile gloves when disassembling",
+      "Do not break or shred casings — fine ABS dust is an inhalation hazard",
+      "Remove the PCB before sending the plastic shell for recycling",
+      "Store in a cool, dry place away from heat sources"
+    ],
+    "reuse_options": [
+      "Disassemble and sell keycaps individually (mechanical keyboard community)",
+      "Donate working units to schools or NGOs",
+      "Strip and sell the internal PCB and metal backplate separately",
+      "ABS plastic shell: shred and pelletise at a plastics recycler for injection moulding feedstock"
+    ],
+    "regulation_note": "Under India's E-Waste (Management) Rules 2022, keyboards are listed as IT and telecom equipment. Producers have Extended Producer Responsibility (EPR) obligations. Consumers should hand over to an authorised PRO (Producer Responsibility Organisation) or collection point. VERIFY/CITE: Schedule I of E-Waste (Management) Rules 2022.",
+    "source": "VERIFY/CITE — add Kaggle/Roboflow dataset reference and regulatory source here"
+  },
+  "mouse": {
+    "typical_plastic": "ABS",
+    "plastic_confidence": "high",
+    "recyclable": "conditional",
+    "recyclable_note": "Recyclable at authorised e-waste facilities after removal of PCB and scroll-wheel assembly.",
+    "bfr_risk": "medium",
+    "bfr_note": "Similar risk profile to keyboards. Older units more likely to contain BFRs. VERIFY/CITE.",
+    "hazards": [
+      "BFR-treated ABS — do not burn",
+      "Internal PCB contains lead solder and potentially cadmium",
+      "Optical sensor lens may contain trace rare earth elements"
+    ],
+    "handling_rules": [
+      "Wear gloves during disassembly",
+      "Separate PCB, cable, and plastic shell before recycling",
+      "Do not dispose in general waste"
+    ],
+    "reuse_options": [
+      "Donate working units",
+      "Harvest the PCB and scroll encoder for electronics hobbyists",
+      "ABS shell suitable for plastics recycling after cleaning"
+    ],
+    "regulation_note": "Same as keyboard — IT and telecom equipment under E-Waste (Management) Rules 2022. Hand over to authorised recycler or PRO. VERIFY/CITE: Schedule I.",
+    "source": "VERIFY/CITE"
+  },
+  "charger_casing": {
+    "typical_plastic": "PC/ABS or PC",
+    "plastic_confidence": "medium",
+    "recyclable": "conditional",
+    "recyclable_note": "PC and PC/ABS are technically recyclable but require specialised facilities. Mixed with internal transformer and electronics — disassembly needed first.",
+    "bfr_risk": "high",
+    "bfr_note": "Charger casings are near heat-generating components and frequently treated with BFRs for fire safety compliance. This is especially true for older or uncertified chargers. VERIFY/CITE: IEC 62368-1 fire safety requirements.",
+    "hazards": [
+      "High BFR content likely — do not burn or shred without respiratory protection",
+      "Internal capacitors may hold residual charge even when unplugged",
+      "Transformers in older chargers may contain PCB-based insulating oil (very old units) — VERIFY/CITE",
+      "Nickel and lead in solder joints"
+    ],
+    "handling_rules": [
+      "Discharge capacitors before disassembly (short the output terminals through a resistor)",
+      "Wear gloves and a dust mask when cutting or breaking the casing",
+      "Never burn — toxic halogenated gases",
+      "Send to authorised e-waste recycler as a complete unit if not disassembling"
+    ],
+    "reuse_options": [
+      "Working chargers: donate or resell",
+      "Casing plastic: send to BFR-capable plastics recycler — do NOT mix with general plastics",
+      "Internal copper transformer windings have scrap value",
+      "PCB: send to precious metal recovery"
+    ],
+    "regulation_note": "Chargers fall under IT and telecom equipment in E-Waste (Management) Rules 2022. Given the BFR risk, prefer authorised hazardous e-waste handlers. VERIFY/CITE.",
+    "source": "VERIFY/CITE"
+  },
+  "printer_casing": {
+    "typical_plastic": "HIPS or ABS",
+    "plastic_confidence": "medium",
+    "recyclable": "conditional",
+    "recyclable_note": "Large volume of plastic but complex disassembly. Most recyclers will take the whole unit.",
+    "bfr_risk": "high",
+    "bfr_note": "Printer casings — especially laser printers — are strong BFR candidates. Laser printers generate ozone and fine toner particles during operation, and casings are treated accordingly. VERIFY/CITE.",
+    "hazards": [
+      "HIPS with BFR — do not burn",
+      "Toner cartridges contain carbon black (potentially carcinogenic at high dust levels) — handle carefully",
+      "Laser printer fuser units reach high temperatures — burn risk during disassembly",
+      "Selenium drum in laser printers: selenium is toxic — do not crush or incinerate"
+    ],
+    "handling_rules": [
+      "Remove toner cartridges first and recycle separately through manufacturer take-back schemes",
+      "Wear an N95 mask when handling toner-contaminated parts",
+      "Allow laser printer to cool completely before disassembly",
+      "Wear gloves — toner is a fine powder that penetrates skin"
+    ],
+    "reuse_options": [
+      "Working units: donate to schools, NGOs, or resell",
+      "Toner cartridges: many manufacturers (HP, Canon, Epson) run free take-back programmes",
+      "Casing plastic (HIPS/ABS): send to authorised BFR plastics recycler",
+      "Metal frame and rollers: scrap metal recycler"
+    ],
+    "regulation_note": "Printers are listed under IT and telecom equipment in E-Waste (Management) Rules 2022. Toner cartridges are separately regulated as consumables. Hand over to PRO or authorised collection centre. VERIFY/CITE.",
+    "source": "VERIFY/CITE"
+  },
+  "tv_panel": {
+    "typical_plastic": "HIPS or ABS",
+    "plastic_confidence": "medium",
+    "recyclable": "conditional",
+    "recyclable_note": "High BFR probability makes standard plastic recycling unsuitable. Requires specialised e-waste facility.",
+    "bfr_risk": "very high",
+    "bfr_note": "CRT TV back panels are among the highest BFR-risk items in consumer e-waste. HIPS with decaBDE or TBBPA flame retardant was standard practice until the mid-2000s. LCD/LED TV panels from post-2010 may comply with RoHS but verify by checking the resin code and manufacturer documentation. VERIFY/CITE: Stockholm Convention on POPs (decaBDE listing).",
+    "hazards": [
+      "Very high BFR content in older CRT casings — never burn, never melt without specialist equipment",
+      "CRT glass contains ~2–3 kg of lead per unit — separate and send to lead recycler",
+      "CRT vacuum implosion risk — never drop or strike a CRT",
+      "LCD backlights (CCFL in pre-LED units) contain mercury — handle as hazardous waste",
+      "Capacitors in PSU retain charge"
+    ],
+    "handling_rules": [
+      "Treat old CRT TV casings as hazardous material — double-bag if broken",
+      "Do not burn, grind, or shred",
+      "Wear gloves, safety glasses, and N95 mask during disassembly",
+      "Keep away from children",
+      "Transport upright — CRTs are fragile"
+    ],
+    "reuse_options": [
+      "Working TVs: donate or resell",
+      "CRT glass: specialist CRT glass recyclers (lead recovery)",
+      "HIPS/ABS back panel: BFR-capable plastics recycler only",
+      "Copper yoke and degaussing coil: scrap copper value",
+      "LCD panel glass: flat glass recycler"
+    ],
+    "regulation_note": "Televisions are listed as consumer electrical and electronic equipment under E-Waste (Management) Rules 2022. CRT TVs are particularly regulated due to lead glass. Must be handed to an authorised recycler — do not dispose in general waste. VERIFY/CITE: Schedule I, Category 3.",
+    "source": "VERIFY/CITE"
+  },
+  "remote": {
+    "typical_plastic": "ABS",
+    "plastic_confidence": "high",
+    "recyclable": "yes",
+    "recyclable_note": "ABS remote casings are generally recyclable at e-waste facilities. Low BFR risk in modern units.",
+    "bfr_risk": "low",
+    "bfr_note": "Modern remotes typically use ABS without heavy BFR treatment. Older units (pre-2000) may have some BFR content. VERIFY/CITE.",
+    "hazards": [
+      "Batteries inside are the main hazard — always remove before disposal",
+      "Button cell batteries contain mercury (older) or lithium — handle as hazardous",
+      "Rubber keypad membrane may contain carbon black"
+    ],
+    "handling_rules": [
+      "Remove all batteries before disposal — recycle batteries separately",
+      "Do not crush or incinerate",
+      "ABS casing can go to general e-waste collection"
+    ],
+    "reuse_options": [
+      "Working remotes: donate with the parent device",
+      "Universal remote: reprogramme and reuse",
+      "IR LED and receiver: harvest for electronics projects",
+      "ABS casing: standard ABS recycling stream"
+    ],
+    "regulation_note": "Remotes as standalone items fall under miscellaneous consumer electronics. Batteries removed from remotes must be disposed of under Batteries Management and Handling Rules. Hand over to authorised collection point. VERIFY/CITE.",
+    "source": "VERIFY/CITE"
+  },
+  "other_plastic": {
+    "typical_plastic": "Unknown — resin code scan required",
+    "plastic_confidence": "low",
+    "recyclable": "unknown",
+    "recyclable_note": "Cannot determine recyclability without identifying the polymer. Use Stage 2 OCR to read the resin code.",
+    "bfr_risk": "medium",
+    "bfr_note": "Any plastic part that was close to heat-generating components (power supplies, motors, transformers) is a BFR candidate regardless of item type.",
+    "hazards": [
+      "Unknown polymer — treat as potentially hazardous until resin code is confirmed",
+      "If near heat sources in original device, assume BFR presence"
+    ],
+    "handling_rules": [
+      "Do not burn",
+      "Wear gloves",
+      "Try to read the resin code (Step 2 in the app) before deciding on disposal route",
+      "If no code found, send to authorised e-waste recycler"
+    ],
+    "reuse_options": [
+      "Identify polymer via resin code, then follow the specific route for that polymer",
+      "If unidentifiable, send to authorised e-waste facility — do not mix into general plastics"
+    ],
+    "regulation_note": "All e-waste plastic must be handled under E-Waste (Management) Rules 2022 regardless of whether the specific polymer is known. Hand over to authorised PRO or recycler. VERIFY/CITE.",
+    "source": "VERIFY/CITE"
+  },
+  "unknown": {
+    "typical_plastic": "Not an e-waste item",
+    "plastic_confidence": "n/a",
+    "recyclable": "n/a",
+    "recyclable_note": "This item was not recognised as a known e-waste plastic item. If it is e-waste, try a clearer photo. If it is not e-waste, this app does not apply.",
+    "bfr_risk": "n/a",
+    "hazards": [],
+    "handling_rules": ["Retake the photo with better lighting and a plain background."],
+    "reuse_options": [],
+    "regulation_note": "n/a",
+    "source": "n/a"
+  },
+  "_plastic_types": {
+    "ABS": {
+      "full_name": "Acrylonitrile Butadiene Styrene",
+      "resin_code": ">ABS<",
+      "iso_11469": "ABS",
+      "recyclable": "yes — at specialist facilities",
+      "notes": "Most common e-waste plastic. Hard, opaque, impact-resistant. Softens at ~105°C. Can contain BFRs. Do not mix with general household plastics."
+    },
+    "PC/ABS": {
+      "full_name": "Polycarbonate / ABS blend",
+      "resin_code": ">PC+ABS<",
+      "iso_11469": "PC+ABS",
+      "recyclable": "conditional — specialist facilities only",
+      "notes": "Common in charger casings, laptop shells. Higher heat resistance than pure ABS. BFR risk similar to ABS."
+    },
+    "PC": {
+      "full_name": "Polycarbonate",
+      "resin_code": ">PC<",
+      "iso_11469": "PC",
+      "recyclable": "yes — at specialist facilities",
+      "notes": "Transparent or translucent. Used in LED diffusers, optical discs. Generally lower BFR risk than ABS in e-waste context."
+    },
+    "HIPS": {
+      "full_name": "High Impact Polystyrene",
+      "resin_code": ">PS<",
+      "iso_11469": "PS",
+      "recyclable": "conditional",
+      "notes": "Common in older TV and monitor casings. High BFR risk in these applications. Not the same recycling stream as food-grade PS."
+    },
+    "PP": {
+      "full_name": "Polypropylene",
+      "resin_code": ">PP<",
+      "iso_11469": "PP",
+      "recyclable": "yes — widely recyclable",
+      "notes": "Used in battery casings, cable clips, some appliance parts. Generally low BFR risk. Recyclable code 5."
+    },
+    "PVC": {
+      "full_name": "Polyvinyl Chloride",
+      "resin_code": ">PVC<",
+      "iso_11469": "PVC",
+      "recyclable": "difficult — specialist only",
+      "notes": "Common in cable insulation. Contains chlorine — burning produces HCl and dioxins. Never incinerate. Contains plasticisers (phthalates) that are endocrine disruptors. Avoid skin contact with old PVC cables."
+    },
+    "PE": {
+      "full_name": "Polyethylene",
+      "resin_code": ">PE<",
+      "iso_11469": "PE",
+      "recyclable": "yes",
+      "notes": "Used in cable sheathing, bags, packaging. Low hazard. Recyclable codes 2 (HDPE) and 4 (LDPE)."
+    }
+  }
+}

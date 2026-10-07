@@ -1,0 +1,63 @@
+{
+  "stage0": {
+    "train": {
+      "plastic": 350,
+      "metal": 280,
+      "PCB": 280,
+      "glass_screen": 210,
+      "cable_wire": 0,
+      "battery": 210,
+      "unknown": 280
+    },
+    "val": {
+      "plastic": 75,
+      "metal": 60,
+      "PCB": 60,
+      "glass_screen": 45,
+      "cable_wire": 0,
+      "battery": 45,
+      "unknown": 60
+    },
+    "test": {
+      "plastic": 75,
+      "metal": 60,
+      "PCB": 60,
+      "glass_screen": 45,
+      "cable_wire": 0,
+      "battery": 45,
+      "unknown": 60
+    }
+  },
+  "stage1": {
+    "train": {
+      "keyboard": 0,
+      "mouse": 0,
+      "charger_casing": 0,
+      "printer_casing": 0,
+      "tv_panel": 0,
+      "remote": 0,
+      "other_plastic": 0,
+      "unknown": 210
+    },
+    "val": {
+      "keyboard": 0,
+      "mouse": 0,
+      "charger_casing": 0,
+      "printer_casing": 0,
+      "tv_panel": 0,
+      "remote": 0,
+      "other_plastic": 0,
+      "unknown": 45
+    },
+    "test": {
+      "keyboard": 0,
+      "mouse": 0,
+      "charger_casing": 0,
+      "printer_casing": 0,
+      "tv_panel": 0,
+      "remote": 0,
+      "other_plastic": 0,
+      "unknown": 45
+    }
+  }
+}
